@@ -35,34 +35,12 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
 
               Text('Click${clickCounter == 1 ? '' : 's'}',
                   style: const TextStyle(fontSize: 25))
-
-              // if( clickCounter == 1 )
-              //   const Text('Click', style: TextStyle(fontSize: 25)),
-
-              // if( clickCounter != 1 )
-              //   const Text('Clicks', style: TextStyle(fontSize: 25)),
             ],
           ),
         ),
         floatingActionButton: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            CustomButton(
-              icon: Icons.refresh_rounded,
-              onPressed: () {
-                clickCounter = 0;
-                setState(() {});
-              },
-            ),
-            const SizedBox(height: 10),
-            CustomButton(
-              icon: Icons.exposure_minus_1_outlined,
-              onPressed: () {
-                if (clickCounter == 0) return;
-                clickCounter--;
-                setState(() {});
-              },
-            ),
             const SizedBox(height: 10),
             CustomButton(
               icon: Icons.plus_one,
